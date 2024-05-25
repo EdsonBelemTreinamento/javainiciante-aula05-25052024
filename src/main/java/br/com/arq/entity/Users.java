@@ -14,25 +14,34 @@ public class Users {
 	private String email;
 	private String password;
 	private String status;
+	private String role;
 
-	
-	public Users(String id, String username, String email, String password, String status) {
+  
+
+	public Users(String id, String username, String email, String password, String status, String role) {
+		super();
 		this.id = id;
 		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.status = status;
+		this.role = role;
 	}
+
 
 	public Users() {
 		 
 	}
  
 
+ 
+
 	@Override
 	public String toString() {
-		return "Users [id=" + id + ", username=" + username + ", email=" + email +  ", status=" + status + "]";
+		return "Users [id=" + id + ", username=" + username + ", email=" + email + ", password=" + password
+				+ ", status=" + status + ", role=" + role + "]";
 	}
+
 
 	public String getId() {
 		return id;
@@ -72,6 +81,16 @@ public class Users {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+	public void setRole(String role) {
+		this.role = role;
 	}
    
 	
